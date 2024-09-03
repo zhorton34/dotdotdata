@@ -1,6 +1,8 @@
 {
   "name": "@findhow/dotdotdata",
   "version": "0.1.0",
+  "license": "MIT",
+  "description": "Deeply nested data helpers using dot notation",
   "tasks": {
     "test": "deno test --allow-read --allow-write --allow-run --allow-env",
     "lint": "deno lint",
