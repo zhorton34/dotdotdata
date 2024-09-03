@@ -1,6 +1,6 @@
 {
   "name": "@findhow/dotdotdata",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "tasks": {
     "test": "deno test --allow-read --allow-write --allow-run --allow-env",
     "lint": "deno lint",
@@ -13,9 +13,7 @@
     "doc-test": "deno test --doc mod.ts",
     "all": "deno task lint && deno task fmt:check && deno task test && deno task check && deno task doc-test && deno task build:docs"
   },
-  "exports": {
-    "./mod.ts": "./mod.ts"
-  },
+  "exports": "./mod.ts",
   "fmt": {
     "include": ["**/*.ts", "**/*.js", "**/*.md", "**/*.json"],
     "exclude": [
