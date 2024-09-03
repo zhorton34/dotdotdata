@@ -1,0 +1,47 @@
+{
+  "name": "@findhow/dotdotdata",
+  "version": "0.1.0",
+  "tasks": {
+    "test": "deno test --allow-read --allow-write --allow-run --allow-env",
+    "lint": "deno lint",
+    "fmt": "deno fmt",
+    "fmt:check": "deno fmt --check",
+    "build:docs": "deno doc --html --output=./docs mod.ts",
+    "build:json-docs": "deno doc --json --output=./docs/docs.json mod.ts",
+    "check": "deno check mod.ts",
+    "coverage": "deno test --coverage=coverage && deno coverage coverage --lcov --output=coverage.lcov",
+    "doc-test": "deno test --doc mod.ts",
+    "all": "deno task lint && deno task fmt:check && deno task test && deno task check && deno task doc-test && deno task build:docs"
+  },
+  "exports": {
+    "./mod.ts": "./mod.ts"
+  },
+  "fmt": {
+    "include": ["**/*.ts", "**/*.js", "**/*.md", "**/*.json"],
+    "exclude": [
+      "**/node_modules/**",
+      "**/*_test.ts",
+      "**/test/**",
+      "**/pipeline.ts"
+    ],
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "singleQuote": true,
+    "proseWrap": "always"
+  },
+  "lint": {
+    "include": ["**/*.ts"],
+    "exclude": [
+      "**/node_modules/**",
+      "**/*_test.ts",
+      "**/test/**",
+      "**/pipeline.ts"
+    ],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-explicit-any"]
+    }
+  }
+}
