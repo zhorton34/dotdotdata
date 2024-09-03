@@ -1,8 +1,16 @@
 {
   "name": "@findhow/dotdotdata",
-  "version": "0.1.0",
-  "license": "MIT",
+  "version": "0.2.0",
+    "license": "MIT",
   "description": "Deeply nested data helpers using dot notation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhorton34/dotdotdata.git"
+  },
+  "homepage": "https://github.com/zhorton34/dotdotdata#readme",
+  "bugs": {
+    "url": "https://github.com/zhorton34/dotdotdata/issues"
+  },
   "tasks": {
     "test": "deno test --allow-read --allow-write --allow-run --allow-env",
     "lint": "deno lint",
@@ -15,9 +23,7 @@
     "doc-test": "deno test --doc mod.ts",
     "all": "deno task lint && deno task fmt:check && deno task test && deno task check && deno task doc-test && deno task build:docs"
   },
-  "exports": {
-    "./mod.ts": "./mod.ts"
-  },
+  "exports": "./mod.ts",
   "fmt": {
     "include": ["**/*.ts", "**/*.js", "**/*.md", "**/*.json"],
     "exclude": [
